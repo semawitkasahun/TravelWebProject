@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylejorny.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+<nav class="nav-container">
+        <div class="logo">
+            <a href="index_hero.html" style="color: #fff; text-decoration: none;">logo</a>
+        </div>
+        <div class="nav-links">
+            <a href="index_hero.html#home">home</a>
+            <a href="index_hero.html#destination">destination</a>
+            <a href="index_hero.html#journeys">journeys</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
+    <section class="hero-slider">
+        <!-- Single Hero Slide -->
+        <div class="single-hero-slide bg-img hero-bg-1">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <div class="hero-slides-content text-center">
+                            <h2 data-animation="fadeInUp" data-delay="100ms">Explore the world with us!</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="journal-entry">
+        <div class="container">
+            <h2>Share Your Journey</h2>
+            <form class="journal-form" action="#" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required placeholder="Where did you go?">
+
+                <label for="good-experience">Good Experience:</label>
+                <textarea id="good-experience" name="good_experience" rows="4" required
+                    placeholder="Describe your best moment..."></textarea>
+
+                <label for="bad-experience">Bad Experience:</label>
+                <textarea id="bad-experience" name="bad_experience" rows="4"
+                    placeholder="Any challenges or bad moments?"></textarea>
+
+                <label for="rating">Rate Your Journey:</label>
+                <div class="rating-stars">
+                    <span class="star" onclick="setRating(1)">&#9733;</span>
+                    <span class="star" onclick="setRating(2)">&#9733;</span>
+                    <span class="star" onclick="setRating(3)">&#9733;</span>
+                    <span class="star" onclick="setRating(4)">&#9733;</span>
+                    <span class="star" onclick="setRating(5)">&#9733;</span>
+                    <input type="hidden" name="rating" id="rating-value" value="0">
+                </div>
+
+                <label for="photo">Upload a Photo:</label>
+                <div class="image-upload-area" onclick="document.getElementById('photo').click()">
+                    Click here to upload a photo
+                    <input type="file" id="photo" name="photo" accept="image/*" style="display: none;">
+                </div>
+
+                <button type="submit">Submit Journey</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>
